@@ -1,0 +1,53 @@
+.wrapper {
+    display: flex;
+    margin-top: 30px;
+    /* background: linear-gradient(93.17deg, #F5F5FA 36.51%, #F2F2FF 96.52%); */
+    background: linear-gradient(93.17deg, #E6CEB2 36.51%, #FFFCF9 96.52%);
+    border-radius: 12px;
+    padding: 14px;
+    gap: 10px;
+    align-items: center;
+    .feeContent {
+        flex: 1;
+        .title {
+            color: rgba(128, 128, 149, 1);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .feeDetail {
+            margin-top: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .totalMoney {
+                font-size: 16px;
+                color: rgba(0, 2, 44, 1);
+                font-weight: 700;
+            }
+            .moneyDetail {
+                display: flex;
+                font-size: 14px;
+                .detailItem {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    .detailMoney {
+                        color: rgba(0, 2, 44, 1);
+                    }
+                    .detailDesc {
+                        color: rgba(126, 138, 147, 1);
+                        margin-left: 5px;
+                        /* display: flex;
+                        align-items: center;
+                        justify-content: center; */
+                    }
+                    &:not(:last-child) {
+                        border-right: 1px solid rgba(126, 138, 147, 1);
+                        margin-right: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

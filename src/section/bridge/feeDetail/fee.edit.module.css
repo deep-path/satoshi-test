@@ -1,0 +1,54 @@
+.fees {
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    border-radius: 4px;
+    margin-top: 80px;
+    .feeItem {
+        flex: 1;
+        height: 62px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid #212121;
+        &:hover {
+            background-color: #FFFFFF1A;
+        }
+        &.feeItemActive {
+            border: 1px solid #FF7A00;
+        }
+        .feeTitle {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .feeAmount {
+            font-size: 14px;
+            font-weight: 500;
+            color: #808095;
+            margin-top: 5px;
+        }
+        .feeInputAmount {
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #808095;
+            display: flex;
+            align-items: center;
+            background-color: #000;
+            border-radius: 5px;
+            padding: 5px;
+            .feeInput {
+                background-color: inherit;
+                border: none;
+                width: 30px;
+                color: inherit;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}

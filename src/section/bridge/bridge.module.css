@@ -1,0 +1,13 @@
+.wrapper {
+    background-color: rgba(39, 39, 39, 1);
+    /* border: 1px solid rgba(243, 243, 249, 1); */
+    border-radius: 6px;
+    padding: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 10px;
+        min-width: 375px;
+    }
+}

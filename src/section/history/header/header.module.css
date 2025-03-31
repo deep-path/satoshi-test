@@ -1,0 +1,181 @@
+.bg {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+.wrapper {
+    width: 1040px;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cur {
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background: rgba(255, 122, 0, 1);
+    }
+
+    .layerItem {
+        display: flex;
+        align-items: center;
+        width: 202px;
+        gap: 10px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 0 10px;
+        &:hover {
+            /* background-color: rgba(245, 245, 250, 1); */
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        margin-top: 10px;
+    }
+
+    .addressWrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 22px;
+        background-color: rgba(128, 0, 255, .1);
+        border-radius: 8px;
+        padding: 0 5px 0 25px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: ' ';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 122, 0, 1);
+            border-radius: 8px;
+            left: 10px;
+            top: 8px;
+            position: absolute;
+        }
+        &.from {
+            background-color: rgba(255, 122, 0, .1);
+            &::after {
+                background-color: rgba(255, 122, 0, 1);
+            }
+        }
+        &.to {
+            background-color: rgba(128, 0, 255, .1);
+            &::after {
+                background-color: rgba(128, 0, 255, 1);
+            }
+        }
+        .disConnect {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .titleContent {
+        .accountSelect {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 25px;
+            font-size: 14px;
+            .menuTitle {
+                color: rgba(126, 138, 147, 1);
+            }
+            .chainItem {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+                width: 112px;
+                height: 30px;
+                justify-content: space-between;
+                padding: 0 10px;
+                border-radius: 2000px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            .connect {
+                margin-left: 10px;
+                color: rgba(255, 122, 0, 1);
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+    .searchBox {
+        display: flex;
+        align-items: center;
+        height: 39px;
+        width: 457px;
+        line-height: 39px;
+        border: 1px solid rgba(0, 2, 44, 0.1);
+        border-radius: 6px;
+        padding: 0 10px;
+        overflow: hidden;
+        background-color: #fff;
+        .input {
+            height: 100%;
+            border: none;
+            flex: 1;
+            outline: none;
+            background-color: #fff;
+            color: rgba(0, 2, 44, 1);
+            font-size: 14px;
+            border-radius: 6px;
+            padding-left: 10px;
+            &::placeholder {
+                color: rgba(128, 128, 149, 1);
+            }
+        }
+        .searchIcon {
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .total {
+        text-align: right;
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .totalNum {
+            color: rgba(255, 122, 0, 1);
+            font-size: 16px;
+            /* position: relative; */
+            /* top: 1px; */
+            /* z-index: 1; */
+            /* margin-top: -10px; */
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        min-width: 375px;
+        padding: 16px;
+        .titleContent {
+            width: 100%;
+            .menu {
+                justify-content: space-between;
+            }
+        }
+    }
+}

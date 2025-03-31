@@ -1,0 +1,188 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+    padding: 0 90px;
+    background-color: rgba(18, 18, 18, 0.85);
+    font-family: Gantari;
+
+    .logoMenu {
+        display: flex;
+        align-items: center;
+        .logoMini {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, .5);
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            .menuItem {
+                margin-left: 50px;
+                cursor: pointer;
+                &.active {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+
+    .accountWrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        z-index: 9;
+        .connectWallet {
+            width: 145px;
+            height: 42px;
+            border-radius: 4px;
+            background-color: rgba(255, 122, 0, 1);
+            text-align: center;
+            line-height: 42px;
+            cursor: pointer;
+            color: #000;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .accountDrop {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .account {
+            display: flex;
+            align-items: center;
+            height: 42px;
+            border: 1px solid rgba(128, 128, 149, 0.3);
+            border-radius: 4px;
+            gap: 10px;
+            padding: 0 10px;
+            font-size: 16px;
+            transition: all .3s;
+            width: 172px;
+            .chainIcon {
+                /* display: flex; */
+                height: 100%;
+                padding-top: 8px;
+                /* align-items: center; */
+            }
+
+           
+            
+            /* &:hover {
+                background-color: rgba(245, 245, 250, 1);
+            } */
+        }
+        .chain {
+            height: 42px;
+            border: 1px solid rgba(128, 128, 149, 0.3);
+            border-radius: 4px;
+            width: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            /* &:hover {
+                background-color: rgba(245, 245, 250, 1);
+            } */
+        }
+        .layer {
+            .layerItem {
+                display: flex;
+                align-items: center;
+                width: 202px;
+                gap: 10px;
+                height: 32px;
+                cursor: pointer;
+                border-radius: 4px;
+                padding: 0 10px;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.08);
+                }
+                margin-top: 10px;
+            }
+            .cur {
+                width: 6px;
+                height: 6px;
+                border-radius: 6px;
+                background: rgba(255, 122, 0, 1);
+            }
+        }
+
+        .miniMenu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 0 16px;
+        min-width: 375px;
+        .logoMenu {
+            .logoBig {
+                display: none;
+            }
+            .logoMini {
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+            
+        }
+
+        .accountWrapper {
+            .miniMenu {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .miniMenuLayer {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: #030F16CC;
+            z-index: 999;
+            .menuLayerContnt {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                margin-left: 100px;
+                background-color: #000;
+                .miniMenuItem {
+                    width: 100%;
+                    display: block;
+                    height: 55px;
+                    line-height: 55px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding-left: 32px;
+                    border-bottom: 1px solid #25313E;
+                    &.itemActive {
+                        color: #FF7A00;
+                    }
+                }
+                .layerLogo {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #212B35;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+}

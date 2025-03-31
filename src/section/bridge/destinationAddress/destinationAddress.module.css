@@ -1,0 +1,46 @@
+.wrapper {
+    margin-top: 16px;
+    .titleWrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .title {
+            color: rgba(128, 128, 149, 1);
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    .addressWrapper {
+        display: flex;
+        align-items: center;
+        background-color: #000000;
+        height: 42px;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-top: 16px;
+        border-radius: 4px;
+        gap: 20px;
+        .input {
+            border: none;
+            outline: none;
+            height: 38px;
+            background-color: inherit;
+            flex: 1;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 400;
+            &::placeholder {
+                color: rgba(255, 255, 255, .3);
+            }
+        }
+        .paste {
+            border-radius: 999px;
+            background-color: rgba(128, 128, 149, 0.2);
+            color: rgba(128, 128, 149, 1);
+            font-size: 12px;
+            cursor: pointer;
+            line-height: 18px;
+            padding: 5px 10px;
+        }
+    }
+}

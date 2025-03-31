@@ -1,0 +1,205 @@
+.bg {
+    /* background-color: inherit; */
+   
+}
+
+.wrapper {
+    width: 1040px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.mini {
+    display: none;
+}
+
+.noData {
+    text-align: center;
+    padding: 200px 0;
+    color: #7E8A93;
+    .text {
+        margin-top: 20px;
+    }
+}
+
+.connect {
+    cursor: pointer;
+    margin-top: 5px;
+    text-decoration: underline;
+    color: rgba(255, 122, 0, 1);
+}
+
+.bottomLine {
+    margin-top: 60px;
+    border-top: 1px solid rgba(128, 128, 149, 0.3);
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(128, 128, 149, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .total {
+        display: flex;
+        gap: 5px;
+    }
+    .page {
+        display: flex;
+        .arrow {
+            color: rgba(126, 138, 147, .3);
+            font-size: 20px;
+            margin: 0 15px;
+            cursor: pointer;
+            user-select:none;
+        }
+        .pageItem {
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.14);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .goTo {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(128, 128, 149, 1);
+            padding-top: 5px;
+            margin: 0 10px 0 30px;
+        }
+        .goToInput {
+            width: 42px;
+            height: 23px;
+            border-radius: 6px;
+            background-color: rgba(33, 33, 33, 1);
+            border: 1px solid rgba(84, 84, 94, 1);
+            color: #fff;
+            text-align: center;
+            outline: none;
+            &:focus {
+                border: 1px solid #FF7A00;
+            }
+            &::-webkit-outer-spin-button{
+                -webkit-appearance:none;
+            }
+            &::-webkit-inner-spin-button {
+                -webkit-appearance:none;
+            }
+        }
+        /* .goToInput::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+            -webkit-appearance:none;
+        } */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        display: none;
+    }
+    .mini {
+        min-width: 375px;
+        display: block;
+        padding: 16px;
+        .miniNoData {
+            text-align: center;
+            margin-top: 30%;
+        }
+
+        .miniPanel {
+            background-color: #FFFFFF0F;
+            border-radius: 4px;
+            .chains {
+                background: #FFFFFF0F;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 14px;
+
+                .amount {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    .tokenImg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .amountNum {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    .tokenSymbol {
+                        font-size: 20px;
+                        color: #7E8A93;
+                    }
+                }
+                .miniArrow {
+                    text-align: center;
+                    margin-top: -5px;
+                }
+                .time {
+                    font-size: 14px;
+                    color: #808095;
+                    text-align: center;
+                }
+            }
+
+            .transDesc {
+                padding: 14px;
+                display: flex;
+                justify-content: space-between;
+                .title {
+                    font-size: 14px;
+                    color: #808095;
+                }
+                .transContent {
+                    text-align: right;
+                    .miniTx {
+                        text-decoration: underline;
+                        color: #808095;
+                        margin-top: 5px;
+                    }
+                }
+                .complete {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .miniPage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nimiPerWrapper {
+                display: flex;
+                gap: 10px;
+            }
+
+            .nimiBehWrapper {
+                display: flex;
+                gap: 10px;
+            }
+
+            .miniFirst {
+                width: 28px;
+                height: 28px;
+                background-color: #FFFFFF24;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+}

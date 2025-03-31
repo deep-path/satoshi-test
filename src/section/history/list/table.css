@@ -1,0 +1,121 @@
+table.history-table {
+    width: 100%;
+    color: #fff;
+    border-collapse: collapse;
+
+    thead {
+        tr {
+            th {
+                color: rgba(128, 128, 149, 1);
+                font-size: 14px;
+                font-weight: 400px;
+                border-bottom: 1px solid rgba(128, 128, 149, 0.3);
+                text-align: left;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+
+            td {
+                /* border: 5px solid #fff; */
+                height: 56px;
+                /* cursor: pointer; */
+                vertical-align: middle;
+
+                font-size: 14px;
+                color: #808095;
+
+                .token-amount {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .tx {
+                    color: rgba(128, 128, 149, 1);
+                    margin-top: 5px;
+                    display: block;
+                    text-decoration: underline;
+                }
+
+                .complete {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .amount {
+                    color: #fff;
+                }
+
+                .address {
+                    color: #fff;
+                }
+
+                &:first-child {
+                    border-radius: 6px 0 0 6px;
+                }
+
+                &:last-child {
+                    border-radius: 0 6px 6px 0;
+                }
+
+                .l-fee {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    .fee-dot {
+                        cursor: pointer;
+                        width: 16px;
+                        height: 12px;
+                        border-radius: 10px;
+                        background: rgba(126, 138, 147, 0.3);
+                        color: rgba(128, 128, 149, 1);
+                        text-align: center;
+                        line-height: 6px;
+                        position: relative;
+
+                        .fee-dot-layer {
+                            position: absolute;
+                            display: none;
+                            width: 163px;
+                            left: 50%;
+                            top: 20px;
+                            transform: translateX(-50%);
+                            border: 1px solid rgba(62, 62, 62, 1);
+                            border-radius: 4px;
+                            background-color: rgba(40, 40, 40, 1);
+
+                            .fee-dot-layer-item {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                height: 30px;
+                                padding: 0 10px;
+                                .fee-dot-title {
+                                    color: rgba(128, 128, 149, 1);
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            color: #fff;
+                            .fee-dot-layer {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover:not(.no-data-tr) {
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}
+

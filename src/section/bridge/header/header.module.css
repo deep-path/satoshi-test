@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+    }
+    .actions {
+        display: flex;
+        gap: 15px;
+        .reload {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(128, 128, 149, 0.3);
+            border-radius: 4px;
+        }
+        .setting {
+            cursor: pointer;
+        }
+        .settingLayer {
+            padding: 5px;
+
+            .settingHeader {
+                font-size: 16px;
+                font-weight: 400;
+                color: #fff;
+            }
+            .subTitle {
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(128, 128, 149, 1);
+                margin-top: 10px;
+            }
+            .percent {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+                .tabs {
+                    display: flex;
+                    height: 28px;
+                    width: 153px;
+                    /* background: rgba(247, 250, 252, 1); */
+                    border-radius: 5px;
+                    color: rgba(128, 128, 149, 1);
+                    .tab {
+                        background-color: rgba(33, 33, 33, 1);
+                        flex: 1;
+                        text-align: center;
+                        line-height: 28px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.1);
+                            border-radius: 5px;
+                        }
+                        &.active {
+                            background-color: rgba(255, 122, 0, 1);
+                            border-radius: 5px;
+                            color: rgba(0, 19, 32, 1);
+                        }
+                    }
+                }
+                .inputWrapper {
+                    display: flex;
+                    width: 58px;
+                    height: 28px;
+                    
+                    background-color: rgba(33, 33, 33, 1);
+                    /* border: 1px solid rgba(232, 232, 244, 1); */
+                    border-radius: 4px;
+                    overflow: hidden;
+                    padding: 0 5px;
+                    .tabInput {
+                        flex: 1;
+                        width: 30px;
+                        border: none;
+                        line-height: 28px;
+                        color: #fff;
+                        outline: none;
+                        background-color: inherit;
+                        caret-color: rgba(255, 122, 0, 1);
+                    }
+                    .inputDesc {
+                        color: rgba(128, 128, 149, 1);
+                        line-height: 28px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
